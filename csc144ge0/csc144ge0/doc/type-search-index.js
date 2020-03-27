@@ -1,1 +1,1 @@
-typeSearchIndex = [{"p":"averages","l":"Means"},{"p":"searchandsort","l":"SearchAndSort"},{"p":"sortingAlgs","l":"sortAlgs"}]
+typeSearchIndex = [{"p":"sortingAlgs","l":"sortAlgs"}]

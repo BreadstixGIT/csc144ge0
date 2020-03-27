@@ -16,6 +16,11 @@ public class sortAlgs {
 	private static final Random RNG = new Random();
 	private static final int Maximum = 100;
 	
+	public static void main(String[] args) {
+		List<Integer> data = makeList(10);
+		System.out.println(mergeSort(data));
+	}
+	
 	/** Creates a random list of numbers with a specified length.
 	 * 
 	 * @param length The length of the generated list (Integer)
@@ -123,17 +128,50 @@ public class sortAlgs {
 		return result;
 	}
 	
+	/** Combines two sorted lists into a third sorted list containing all values from each
+	 * 
+	 * @param values1 The first sorted list (List)
+	 * @param values2 The second sorted list (List)
+	 * @return A combined sorted list (List)
+	 */
+	public static List<Integer> merge(List<Integer> values1, List<Integer> values2) {
+		List<Integer> result = new ArrayList<Integer>();
+		int index1 = 0;
+		int index2 = 0;
+		while (index1 < values1.size() && index2 < values2.size()) {
+			if (values1.get(index1) < values2.get(index2)) {
+				result.add(values1.get(index1));
+				index1++;
+			} else {
+				result.add(values2.get(index2));
+				index2++;
+			}
+		} 
+		if (index1 < values1.size()) {
+			result.addAll(values1.subList(index1, values1.size()));
+		} else {
+			result.addAll(values2.subList(index2, values2.size()));
+		}
+		return result;
+	}
+	
 	/** Sorts a list of integers using merge sort
 	 * 
 	 * @param values The list of integers to be sorted (List)
 	 * @return A sorted list of integers (List)
 	 */
 	public static List<Integer> mergeSort(List<Integer> values){
-		List<Integer> result = new ArrayList<Integer>();
+		if (values.size() <= 1) {
+			return values;
+		} 
+		List<Integer> first = new ArrayList<Integer>();
+		List<Integer> last = new ArrayList<Integer>();
 		Integer midVal = values.size()/2;
+		first = values.subList(0, midVal);
+		last = values.subList(midVal, values.size());
+		first = mergeSort(first);
+		last = mergeSort(last);
+		return merge(first, last);
 	}
-	
-	public static void main(String[] args) {
 		
-	}
 }
