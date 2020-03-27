@@ -8,7 +8,7 @@ import java.util.Random;
  *  selection sort and insertion sort. 
  * 
  * @author Jack Castiglione
- * @version 3/26/2020
+ * @version 3/27/2020
  */
 
 public class sortAlgs {
@@ -18,8 +18,8 @@ public class sortAlgs {
 	
 	/** Creates a random list of numbers with a specified length.
 	 * 
-	 * @param length The length of the generated list
-	 * @return A list of random numbers with a length equal to the length parameter
+	 * @param length The length of the generated list (Integer)
+	 * @return A list of random numbers with a length equal to the length parameter (List)
 	 */
 	public static List<Integer> makeList(Integer length){
 		List<Integer> result = new ArrayList<Integer>();
@@ -32,8 +32,8 @@ public class sortAlgs {
 	
 	/** Copies a list into a separate specified list location
 	 * 
-	 * @param initList The initial list to be copied
-	 * @param finalList The destination for the initial list to be copied in to
+	 * @param initList The initial list to be copied (List)
+	 * @param finalList The destination for the initial list to be copied in to (List)
 	 *  
 	 */
 	public static void copyList(List<Integer> initList, List<Integer> finalList){
@@ -44,8 +44,8 @@ public class sortAlgs {
 	
 	/** Finds the minimum of a list of integers
 	 * 
-	 * @param values The list of integers of which the method will find the minimum
-	 * @return The minimum value within the list
+	 * @param values The list of integers of which the method will find the minimum (List)
+	 * @return The minimum value within the list (Integer)
 	 */
 	public static Integer findMin(List<Integer> values) {
 		int minVal = values.get(0);
@@ -59,8 +59,8 @@ public class sortAlgs {
 	
 	/** Finds the position of the minimum of a list of integers
 	 * 
-	 * @param values The list of integers of which the method will find the minimum
-	 * @return The position of the first occurrence of the minimum value within the list
+	 * @param values The list of integers of which the method will find the minimum (List)
+	 * @return The position of the first occurrence of the minimum value within the list (Integer)
 	 */
 	public static Integer findPosMin(List<Integer> values) {
 		int minPos = 0;
@@ -79,8 +79,8 @@ public class sortAlgs {
 	
 	/** Sorts a list of integers using selection sort
 	 * 
-	 * @param values The list of integers to be sorted
-	 * @return A sorted list of integers
+	 * @param values The list of integers to be sorted (List)
+	 * @return A sorted list of integers (List)
 	 */
 	public static List<Integer> selecSort(List<Integer> values){
 		List<Integer> funcValues = new ArrayList<Integer>();
@@ -99,8 +99,8 @@ public class sortAlgs {
 	
 	/** Sorts a list of integers using insertion sort
 	 * 
-	 * @param values The list of integers to be sorted
-	 * @return A sorted list of integers
+	 * @param values The list of integers to be sorted (List)
+	 * @return A sorted list of integers (List)
 	 */
 	public static List<Integer> insertSort(List<Integer> values){
 		List<Integer> funcValues = new ArrayList<Integer>();

@@ -1,1 +1,1 @@
-packageSearchIndex = [{"l":"sortingAlgs"}]
+packageSearchIndex = [{"l":"averages"},{"l":"searchandsort"}]
