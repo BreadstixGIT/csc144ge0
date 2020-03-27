@@ -123,6 +123,16 @@ public class sortAlgs {
 		return result;
 	}
 	
+	/** Sorts a list of integers using merge sort
+	 * 
+	 * @param values The list of integers to be sorted (List)
+	 * @return A sorted list of integers (List)
+	 */
+	public static List<Integer> mergeSort(List<Integer> values){
+		List<Integer> result = new ArrayList<Integer>();
+		Integer midVal = values.size()/2;
+	}
+	
 	public static void main(String[] args) {
 		
 	}
