@@ -4,8 +4,9 @@ import java.util.List;
 import java.util.ArrayList;
 import java.util.Random;
 
-/** This program has methods to generate a random list and sort it using two basic sorting algorithms,
- *  selection sort and insertion sort. 
+/** This program has methods to generate a random list , search it using basic searching algorithms, 
+ * and sort it using basic sorting algorithms.
+ * 
  * 
  * @author Jack Castiglione
  * @version 3/27/2020
