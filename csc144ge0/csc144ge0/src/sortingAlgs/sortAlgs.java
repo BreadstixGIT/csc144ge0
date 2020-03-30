@@ -17,8 +17,6 @@ public class sortAlgs {
 	private static final int Maximum = 100;
 	
 	public static void main(String[] args) {
-		List<Integer> data = makeList(10);
-		System.out.println(mergeSort(data));
 	}
 	
 	/** Creates a random list of numbers with a specified length.
@@ -46,7 +44,7 @@ public class sortAlgs {
 			finalList.add(n);
 		}
 	}
-	
+	 
 	/** Finds the minimum of a list of integers
 	 * 
 	 * @param values The list of integers of which the method will find the minimum (List)
@@ -80,6 +78,53 @@ public class sortAlgs {
 			currentPos++;
 		}
 		return minPos;
+	}
+	
+	/** Uses selection search to find the first index of a given value in a list if such an index
+	 * exists 
+	 * 
+	 * @param values The list to search through (List)
+	 * @param searchFor The value to be searched for (Integer)
+	 * @return The index of the value searchFor, or -1 if no such index exists
+	 */
+	public static Integer selecSearch(List<Integer> values, int searchFor) {
+		for (int index = 0; index < values.size(); index++) {
+			if (values.get(index) == searchFor) {
+				return index;
+			}
+		}
+		return -1;
+	}
+	
+	/** Uses binary search to find the first index of a given value in a list if such an index
+	 * exists 
+	 * 
+	 * @param values The list to search through (List)
+	 * @param searchFor The value to be searched for (Integer)
+	 * @return The index of the value searchFor, or -1 if no such index exists
+	 */
+	public static Integer binSearch(List<Integer> values, int searchFor) {
+		List<Integer> funcValues = new ArrayList<Integer>();
+		Integer index = 0;
+		copyList(values, funcValues);
+		while (funcValues.size() > 1) {
+			Integer midVal = funcValues.size()/2;
+			if (funcValues.get(midVal) == searchFor) {
+				return midVal + index;
+			} else if (funcValues.get(midVal) < searchFor) {
+				index = index + midVal;
+				funcValues = funcValues.subList(midVal, funcValues.size());
+			} else if (funcValues.get(midVal) > searchFor) {
+				funcValues = funcValues.subList(0, midVal);
+				
+			}
+			System.out.println(funcValues);
+		}
+		if (funcValues.get(0) == searchFor) {
+			return index;
+		} else {
+			return -1;
+		}
 	}
 	
 	/** Sorts a list of integers using selection sort
