@@ -218,6 +218,7 @@ public class sortAlgs {
 		first = mergeSort(first);
 		last = mergeSort(last);
 		return merge(first, last);
+		//marcus is tall
 	}
 		
 }
