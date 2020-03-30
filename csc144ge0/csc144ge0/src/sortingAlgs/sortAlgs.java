@@ -9,7 +9,7 @@ import java.util.Random;
  * 
  * 
  * @author Jack Castiglione
- * @version 3/27/2020
+ * @version 3/30/2020
  */
 
 public class sortAlgs {
